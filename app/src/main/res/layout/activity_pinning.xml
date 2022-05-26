@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.activity.PinningActivity">
+
+
+    <TextView
+        android:id="@+id/activity_pinning_txt_url"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:labelFor="@id/activity_pinning_edt_url"
+        android:text="Url:"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/activity_pinning_edt_url"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:inputType="textPersonName"
+        android:text="https://api.github.com/users/zani0x03/repos"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/activity_pinning_txt_url" />
+ />
+
+    <TextView
+        android:id="@+id/activity_pinning_txt_pattern"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:text="Pattern:"
+        android:labelFor="@id/activity_pinning_edt_pattern"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/activity_pinning_edt_url" />
+
+    <EditText
+        android:id="@+id/activity_pinning_edt_pattern"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:inputType="textPersonName"
+        android:text="*.github.com"
+        app:layout_constraintTop_toBottomOf="@+id/activity_pinning_txt_pattern"
+        app:layout_constraintStart_toStartOf="parent"
+        />
+
+
+    <TextView
+        android:id="@+id/activity_pinning_txt_pinning"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:text="Pinning:"
+        android:labelFor="@id/activity_pinning_edt_pinning"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/activity_pinning_edt_pattern" />
+
+    <EditText
+        android:id="@+id/activity_pinning_edt_pinning"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:inputType="textPersonName"
+        android:text="sha256/uyPYgclc5Jt69vKu92vci6etcBDY8UNTyrHQZJpVoZY="
+        app:layout_constraintTop_toBottomOf="@+id/activity_pinning_txt_pinning"
+        app:layout_constraintStart_toStartOf="parent"
+        />
+
+
+
+
+
+    <Button
+        android:id="@+id/pinning_activity_btn_enviar_solicitacao"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Enviar Solicitacao"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/activity_pinning_edt_pinning" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
