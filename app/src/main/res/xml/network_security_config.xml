@@ -4,14 +4,14 @@
             <!-- Trust preinstalled CAs -->
             <certificates src="system" />
 <!--             Additionally trust user added CAs-->
-<!--            <certificates src="user" />-->
+            <certificates src="user" />
         </trust-anchors>
     </base-config>
 
-<!--    <domain-config>-->
-<!--        <domain includeSubdomains="true">api.github.com</domain>-->
-<!--        <pin-set>-->
-<!--            <pin digest="SHA-256">uyPYgclc5Jt69vKu92vci6etcBDY8UNTyrHQZJpVoZY=</pin>-->
-<!--        </pin-set>-->
-<!--    </domain-config>-->
+    <domain-config>
+        <domain includeSubdomains="true">api.github.com</domain>
+        <pin-set>
+            <pin digest="SHA-256">uyPYgclc5Jt69vKu92vci6etcBDY8UNTyrHQZJpVoZY=</pin>
+        </pin-set>
+    </domain-config>
 </network-security-config>
