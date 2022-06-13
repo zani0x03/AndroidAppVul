@@ -7,6 +7,7 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
 import br.com.zani0x03.vulappconsultingstudy.R
+import br.com.zani0x03.vulappconsultingstudy.const.Constants
 import okhttp3.*
 import java.io.IOException
 
@@ -31,12 +32,14 @@ class PinningActivity : AppCompatActivity() {
         val edtPinning = findViewById<EditText>(R.id.activity_pinning_edt_pinning)
 
 
-        val certificatePinner = CertificatePinner.Builder().add(
-            edtPattern.text.toString(),
-            edtPinning.text.toString()
-        ).build()
+//        val certificatePinner = CertificatePinner.Builder().add(
+//            edtPattern.text.toString(),
+//            edtPinning.text.toString()
+//        ).build()
 
-        val client = OkHttpClient.Builder().certificatePinner(certificatePinner).build()
+        //val client = OkHttpClient.Builder().certificatePinner(certificatePinner).build()
+
+        val client = OkHttpClient.Builder().build()
 
         val request = Request.Builder()
             .url(edtUrl.text.toString())
@@ -44,11 +47,11 @@ class PinningActivity : AppCompatActivity() {
 
         client.newCall(request).enqueue(object : Callback {
             override fun onFailure(call: Call, e: IOException) {
-                Log.e("VulAppConsultingStudy",e.message.toString())
+                Log.e(Constants.ApplicationName,e.message.toString())
             }
             override fun onResponse(call: Call, response: Response) {
                 val body = response.body?.string().toString()
-                Log.i("VulAppConsultingStudy",body)
+                Log.i(Constants.ApplicationName,body)
             }
         })
     }

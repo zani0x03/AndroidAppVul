@@ -3,10 +3,15 @@ package br.com.zani0x03.vulappconsultingstudy.model
 import android.os.Build
 import androidx.annotation.RequiresApi
 import java.time.LocalDate
+import java.util.*
 
-class ClasseOfuscada {
-    var nome: String = "defaultValue"
-    var idade: Int = 18
+class ClasseOfuscada (nome:String, dataNascimento: LocalDate){
+    var nome = nome
     @RequiresApi(Build.VERSION_CODES.O)
-    var dataNascimento = LocalDate.of(2018, 12, 31)
+    var idade = LocalDate.now().year - dataNascimento.year
+    var dataNascimento = dataNascimento
+
+    public fun maiorDeIdade(): Boolean {
+        return idade >= 18
+    }
 }

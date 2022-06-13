@@ -15,6 +15,15 @@
         android:theme="@style/Theme.VulAppConsultingStudy"
         android:usesCleartextTraffic="true">
         <activity
+            android:name=".ui.activity.CadastroBasicoActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.activity.SecretCredentialsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.activity.CredentialsActivity"
+            android:exported="false" />
+        <activity
             android:name=".ui.activity.PinningActivity"
             android:exported="false" />
         <activity
