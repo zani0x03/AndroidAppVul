@@ -32,14 +32,14 @@ class PinningActivity : AppCompatActivity() {
         val edtPinning = findViewById<EditText>(R.id.activity_pinning_edt_pinning)
 
 
-//        val certificatePinner = CertificatePinner.Builder().add(
-//            edtPattern.text.toString(),
-//            edtPinning.text.toString()
-//        ).build()
+        val certificatePinner = CertificatePinner.Builder().add(
+            edtPattern.text.toString(),
+            edtPinning.text.toString()
+        ).build()
 
-        //val client = OkHttpClient.Builder().certificatePinner(certificatePinner).build()
+        val client = OkHttpClient.Builder().certificatePinner(certificatePinner).build()
 
-        val client = OkHttpClient.Builder().build()
+        //val client = OkHttpClient.Builder().build()
 
         val request = Request.Builder()
             .url(edtUrl.text.toString())
